@@ -22,9 +22,6 @@ namespace _1911062202_NGOTUANKIET_BigShool.Controllers
         {
         }
 
-        //hahahahahahahaha
-
-
         public AccountController(ApplicationUserManager userManager, ApplicationSignInManager signInManager )
         {
             UserManager = userManager;
