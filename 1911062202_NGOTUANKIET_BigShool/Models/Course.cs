@@ -17,5 +17,6 @@ namespace _1911062202_NGOTUANKIET_BigShool.Models
         public Category Category { get; set; }
         [Required]
         public byte CategoryId { get; set; }
+        //kiet
     }
 }
