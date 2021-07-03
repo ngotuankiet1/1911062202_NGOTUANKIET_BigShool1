@@ -1,4 +1,5 @@
-﻿using System;
+﻿using _1911062202_NGOTUANKIET_BigShool.Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -11,9 +12,10 @@ namespace _1911062202_NGOTUANKIET_BigShool.ViewModels
         public string Date { get; set; }
         public string Time { get; set; }
         public byte Category { get; set; }
+        public IEnumerable<Category> Categories { get; set; }
         public DateTime GetDateTime()
         {
-            return DateTime.Parse(string.Format("{0}{1}", Date, Time));
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
     }
 }

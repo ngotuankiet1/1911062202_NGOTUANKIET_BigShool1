@@ -13,7 +13,7 @@ namespace _1911062202_NGOTUANKIET_BigShool.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202106300717000_PopulateCategoryTable"; }
+            get { return "202107031141266_PopulateCategoryTable"; }
         }
         
         string IMigrationMetadata.Source

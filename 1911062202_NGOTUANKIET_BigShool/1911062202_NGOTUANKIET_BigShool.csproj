@@ -45,6 +45,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=2.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System" />
     <Reference Include="System.Data" />
@@ -157,9 +160,6 @@
     <Reference Include="Microsoft.Owin.Security.OAuth">
       <HintPath>..\packages\Microsoft.Owin.Security.OAuth.4.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
     </Reference>
-    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
-      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="App_Start\BundleConfig.cs" />
@@ -178,13 +178,13 @@
     <Compile Include="Migrations\202106300613576_InitialModel.Designer.cs">
       <DependentUpon>202106300613576_InitialModel.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106300647566_CreateTableCoure.cs" />
-    <Compile Include="Migrations\202106300647566_CreateTableCoure.Designer.cs">
-      <DependentUpon>202106300647566_CreateTableCoure.cs</DependentUpon>
+    <Compile Include="Migrations\202107031203112_CreateTableCourse.cs" />
+    <Compile Include="Migrations\202107031203112_CreateTableCourse.Designer.cs">
+      <DependentUpon>202107031203112_CreateTableCourse.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\202106300717000_PopulateCategoryTable.cs" />
-    <Compile Include="Migrations\202106300717000_PopulateCategoryTable.Designer.cs">
-      <DependentUpon>202106300717000_PopulateCategoryTable.cs</DependentUpon>
+    <Compile Include="Migrations\202107031204499_PopulateCategoryTable.cs" />
+    <Compile Include="Migrations\202107031204499_PopulateCategoryTable.Designer.cs">
+      <DependentUpon>202107031204499_PopulateCategoryTable.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
@@ -275,11 +275,11 @@
     <EmbeddedResource Include="Migrations\202106300613576_InitialModel.resx">
       <DependentUpon>202106300613576_InitialModel.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106300647566_CreateTableCoure.resx">
-      <DependentUpon>202106300647566_CreateTableCoure.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107031203112_CreateTableCourse.resx">
+      <DependentUpon>202107031203112_CreateTableCourse.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202106300717000_PopulateCategoryTable.resx">
-      <DependentUpon>202106300717000_PopulateCategoryTable.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202107031204499_PopulateCategoryTable.resx">
+      <DependentUpon>202107031204499_PopulateCategoryTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

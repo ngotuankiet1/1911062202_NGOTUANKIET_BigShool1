@@ -13,4 +13,5 @@ namespace _1911062202_NGOTUANKIET_BigShool.Models
         [StringLength(255)]
         public string Name { get; set; }
     }
+
 }
