@@ -25,4 +25,4 @@ namespace _1911062202_NGOTUANKIET_BigShool.ViewModels
             return DateTime.Parse(String.Format("{0} {1}", Date, Time));
         }
     }
-}//kietdz
+}
