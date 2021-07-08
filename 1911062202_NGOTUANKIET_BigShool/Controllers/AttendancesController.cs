@@ -6,6 +6,7 @@ using _1911062202_NGOTUANKIET_BigShool.Models;
 using System.Net.Http;
 using System.Web.Http;
 using Microsoft.AspNet.Identity;
+using _1911062202_NGOTUANKIET_BigShool.DTOS;
 
 namespace _1911062202_NGOTUANKIET_BigShool.Controllers
 {
@@ -19,15 +20,15 @@ namespace _1911062202_NGOTUANKIET_BigShool.Controllers
         }
 
         [HttpPost]
-        public IHttpActionResult Attend([FromBody] int courseId)
+        public IHttpActionResult Attend(AttendanceDto attendanceDto)
         {
             var userID = User.Identity.GetUserId();
-            if (_dbContext.Attendances.Any(a => a.AttendeeId == userID && a.CourseId == courseId))
+            if (_dbContext.Attendances.Any(a => a.AttendeeId == userID && a.CourseId == attendanceDto.CourseId))
                 return BadRequest("The Attendance already exists!");
 
             var attendance = new Attendance
             {
-                CourseId = courseId,
+                CourseId = attendanceDto.CourseId,
                 AttendeeId = userID
             };
 
