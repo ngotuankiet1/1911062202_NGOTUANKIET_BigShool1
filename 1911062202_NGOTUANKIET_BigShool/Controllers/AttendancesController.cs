@@ -10,10 +10,9 @@ using Microsoft.AspNet.Identity;
 namespace _1911062202_NGOTUANKIET_BigShool.Controllers
 {
     [Authorize]
-    public class AttendancesController : ApiController
+    public class AttendancesController :ApiController 
     {
         private ApplicationDbContext _dbContext;
-
         public AttendancesController()
         {
             _dbContext = new ApplicationDbContext();
@@ -22,10 +21,14 @@ namespace _1911062202_NGOTUANKIET_BigShool.Controllers
         [HttpPost]
         public IHttpActionResult Attend([FromBody] int courseId)
         {
+            var userID = User.Identity.GetUserId();
+            if (_dbContext.Attendances.Any(a => a.AttendeeId == userID && a.CourseId == courseId))
+                return BadRequest("The Attendance already exists!");
+
             var attendance = new Attendance
             {
                 CourseId = courseId,
-                AttendeeId = User.Identity.GetUserId()
+                AttendeeId = userID
             };
 
             _dbContext.Attendances.Add(attendance);
