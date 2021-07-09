@@ -37,5 +37,22 @@ namespace _1911062202_NGOTUANKIET_BigShool.Controllers
 
             return Ok();
         }
+
+        [HttpDelete]
+        public IHttpActionResult DeleteAttendance(int id)
+        {
+            var userID = User.Identity.GetUserId();
+
+            var attendance = _dbContext.Attendances
+                .SingleOrDefault(a => a.AttendeeId == userID && a.CourseId == id);
+
+            if (attendance == null)
+                return NotFound();
+
+            _dbContext.Attendances.Remove(attendance);
+            _dbContext.SaveChanges();
+
+            return Ok(id);
+        }
     }
 }
