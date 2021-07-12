@@ -12,6 +12,9 @@ namespace _1911062202_NGOTUANKIET_BigShool
             bundles.Add(new ScriptBundle("~/bundles/app").Include(
                        "~/scripts/app/coursesController.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/app").Include(
+                "~/scripts/app/follow.js"));
+
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
 
