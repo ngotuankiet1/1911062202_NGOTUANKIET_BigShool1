@@ -9,11 +9,9 @@ namespace _1911062202_NGOTUANKIET_BigShool
         public static void RegisterBundles(BundleCollection bundles)
         {
 
-            bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                       "~/scripts/app/coursesController.js"));
-
-            bundles.Add(new ScriptBundle("~/bundles/app").Include(
-                "~/scripts/app/follow.js"));
+            //bundles.Add(new ScriptBundle("~/bundles/app").Include(
+            //           "~/scripts/app/coursesController.js",
+            //           "~/scripts/app/followController.js"));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
                         "~/Scripts/jquery-{version}.js"));
@@ -28,8 +26,8 @@ namespace _1911062202_NGOTUANKIET_BigShool
 
             bundles.Add(new ScriptBundle("~/bundles/bootstrap").Include(
                       "~/Scripts/bootstrap.js",
-                      "~/Scripts/respond.js",
-                      "~/Scripts/bootbox.min.js"));
+                      "~/Scripts/bootbox.min.js",
+                      "~/Scripts/respond.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",

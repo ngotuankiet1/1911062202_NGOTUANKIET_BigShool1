@@ -5,6 +5,7 @@ using System.Net;
 using _1911062202_NGOTUANKIET_BigShool.Models;
 using System.Net.Http;
 using System.Web.Http;
+using System.Web.Routing;
 using Microsoft.AspNet.Identity;
 using _1911062202_NGOTUANKIET_BigShool.DTOS;
 
@@ -43,8 +44,7 @@ namespace _1911062202_NGOTUANKIET_BigShool.Controllers
         {
             var userID = User.Identity.GetUserId();
 
-            var attendance = _dbContext.Attendances
-                .SingleOrDefault(a => a.AttendeeId == userID && a.CourseId == id);
+            var attendance = _dbContext.Attendances.SingleOrDefault(a => a.AttendeeId == userID && a.CourseId == id);
 
             if (attendance == null)
                 return NotFound();

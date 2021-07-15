@@ -9,6 +9,8 @@ namespace _1911062202_NGOTUANKIET_BigShool.ViewModels
 {
     public class CourseViewModel
     {
+        public IEnumerable<Course> UpcommingCourses { get; set; }
+        public bool ShowAction { get; set; }
         public int Id { get; set; }
 
         [Required]
@@ -29,7 +31,7 @@ namespace _1911062202_NGOTUANKIET_BigShool.ViewModels
         }
         public DateTime GetDateTime()
         {
-            return DateTime.Parse(String.Format("{0} {1}", Date, Time));
+            return DateTime.Parse(string.Format("{0} {1}", Date, Time));
         }
     }
 }
